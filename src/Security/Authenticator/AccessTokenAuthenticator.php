@@ -49,14 +49,17 @@ class AccessTokenAuthenticator extends AbstractAuthenticator
     }
 
     public function onAuthenticationSuccess(
-        Request $request, TokenInterface $token, string $firewallName
+        Request $request,
+        TokenInterface $token,
+        string $firewallName
     ): ?Response
     {
         return null;
     }
 
     public function onAuthenticationFailure(
-        Request $request, AuthenticationException $exception
+        Request $request,
+        AuthenticationException $exception
     ): ?Response
     {
         return new Response($exception->getMessageKey(), Response::HTTP_UNAUTHORIZED);
