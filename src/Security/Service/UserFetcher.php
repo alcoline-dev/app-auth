@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Alcoline\Core\Security\Service;
+namespace Alcoline\Auth\Security\Service;
 
-use Alcoline\Core\Api\DTO\UserMeInfoView;
-use Alcoline\Core\Contracts\IUserSdk;
+use Alcoline\Auth\Api\DTO\UserMeInfoView;
+use Alcoline\Auth\Contracts\IUserSdk;
 use Ufo\DTO\DTOTransformer;
 
 readonly class UserFetcher

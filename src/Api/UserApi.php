@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Alcoline\Core\Api;
+namespace Alcoline\Auth\Api;
 
-use Alcoline\Core\Api\DTO\UserMeInfoView;
-use Alcoline\Core\Contracts\IAsyncMessengerSDK;
-use Alcoline\Core\Contracts\IMessengerSDK;
-use Alcoline\Core\Contracts\IUserSdk;
-use Alcoline\Core\Exceptions\GetOTPException;
-use Alcoline\Core\Security\Service\LoginLimiter;
-use Alcoline\Core\Security\Service\UserContext;
+use Alcoline\Auth\Api\DTO\UserMeInfoView;
+use Alcoline\Auth\Contracts\IAsyncMessengerSDK;
+use Alcoline\Auth\Contracts\IMessengerSDK;
+use Alcoline\Auth\Contracts\IUserSdk;
+use Alcoline\Auth\Exceptions\GetOTPException;
+use Alcoline\Auth\Security\Service\LoginLimiter;
+use Alcoline\Auth\Security\Service\UserContext;
 use Symfony\Component\Validator\Constraints as Assert;
 use Twig\Environment;
 use Twig\Error\LoaderError;

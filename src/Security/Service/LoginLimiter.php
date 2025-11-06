@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Alcoline\Core\Security\Service;
+namespace Alcoline\Auth\Security\Service;
 
-use Alcoline\Core\Exceptions\LoginRateLimitException;
+use Alcoline\Auth\Exceptions\LoginRateLimitException;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\RateLimiter\RateLimiterFactory;
 

@@ -2,16 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Alcoline\Core\Api;
+namespace Alcoline\Auth\Api;
 
 use GuzzleHttp\Exception\RequestException;
 use ReflectionObject;
 use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
 use Throwable;
-use Alcoline\Core\Contracts\ICanPing;
+use Alcoline\Auth\Contracts\ICanPing;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Pool;
+
 use function array_merge;
 
 class HubApi

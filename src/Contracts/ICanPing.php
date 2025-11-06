@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Alcoline\Core\Contracts;
+namespace Alcoline\Auth\Contracts;
 
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 

@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Alcoline\Core\Security;
+namespace Alcoline\Auth\Security;
 
 use InvalidArgumentException;
-use Alcoline\Core\Contracts\ISecuritySDK;
+use Alcoline\Auth\Contracts\ISecuritySDK;
 
 class SecurityComponent
 {

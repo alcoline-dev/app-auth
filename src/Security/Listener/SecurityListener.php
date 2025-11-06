@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Alcoline\Core\Security\Listener;
+namespace Alcoline\Auth\Security\Listener;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
@@ -10,7 +10,7 @@ use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
-use Alcoline\Core\Security\Authenticator\AccessTokenAuthenticator;
+use Alcoline\Auth\Security\Authenticator\AccessTokenAuthenticator;
 use Ufo\JsonRpcBundle\Controller\ApiController;
 use Ufo\JsonRpcBundle\Server\RequestPrepare\RequestCarrier;
 use Ufo\RpcError\RpcInvalidTokenException;

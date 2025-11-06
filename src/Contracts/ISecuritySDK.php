@@ -1,6 +1,6 @@
 <?php
 
-namespace Alcoline\Core\Contracts;
+namespace Alcoline\Auth\Contracts;
 
 interface ISecuritySDK extends ICanPing
 {

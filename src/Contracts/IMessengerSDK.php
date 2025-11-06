@@ -1,6 +1,6 @@
 <?php
 
-namespace Alcoline\Core\Contracts;
+namespace Alcoline\Auth\Contracts;
 
 interface IMessengerSDK extends ICanPing
 {

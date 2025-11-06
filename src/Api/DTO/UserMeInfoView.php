@@ -1,6 +1,6 @@
 <?php
 
-namespace Alcoline\Core\Api\DTO;
+namespace Alcoline\Auth\Api\DTO;
 
 use Ufo\DTO\ArrayConstructibleTrait;
 use Ufo\DTO\ArrayConvertibleTrait;

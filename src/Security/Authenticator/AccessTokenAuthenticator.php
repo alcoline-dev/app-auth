@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Alcoline\Core\Security\Authenticator;
+namespace Alcoline\Auth\Security\Authenticator;
 
-use Alcoline\Core\Api\DTO\UserMeInfoView;
-use Alcoline\Core\Security\Service\UserContext;
-use Alcoline\Core\Security\Service\UserFetcher;
+use Alcoline\Auth\Api\DTO\UserMeInfoView;
+use Alcoline\Auth\Security\Service\UserContext;
+use Alcoline\Auth\Security\Service\UserFetcher;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;

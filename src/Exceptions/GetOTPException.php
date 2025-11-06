@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Alcoline\Core\Exceptions;
+namespace Alcoline\Auth\Exceptions;
 
 class GetOTPException extends \DomainException
 {

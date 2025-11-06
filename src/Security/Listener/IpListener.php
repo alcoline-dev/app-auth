@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Alcoline\Core\Security\Listener;
+namespace Alcoline\Auth\Security\Listener;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
