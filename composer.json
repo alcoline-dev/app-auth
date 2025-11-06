@@ -1,7 +1,7 @@
 {
     "name": "alcoline-software/app-auth",
     "type": "library",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "minimum-stabilyty": "stable",
     "license": "MIT",
     "authors": [
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Alcoline\\Core\\": "src/"
+            "Alcoline\\Auth\\": "src/"
         }
     },
     "require": {
