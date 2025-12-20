@@ -11,17 +11,24 @@ class UserMeInfoView implements IArrayConvertible, IArrayConstructible
 {
     use ArrayConstructibleTrait, ArrayConvertibleTrait;
 
-    public ?string $routeName = null;
-    public string $userId;
-    public string $phone;
-    public string $fullName;
-    public string $firstName;
-    public string $lastName;
-    public string $roleName;
-    public string $roleSlug;
-    public string $createdAt;
-    public string $updatedAt;
-    public string|null $email;
-    public string|null $externalId;
-//    public TeamShortInfoView|null $team;
+    /**
+     * @param RoleDTO[] $roles
+     */
+    public function __construct(
+        public string $userId,
+        public string $phone,
+        public string $fullName,
+        public string $firstName,
+        public string $lastName,
+        public string $roleName,
+        public string $roleSlug,
+        public RoleDTO $mainRole,
+        public array $roles,
+        public string $createdAt,
+        public string $updatedAt,
+        public string|null $email = null,
+        public string|null $externalId = null,
+        public ?string $routeName = null,
+        public ?RoleDTO $authorizedRole = null
+    ) {}
 }

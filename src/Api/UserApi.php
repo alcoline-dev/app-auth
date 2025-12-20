@@ -58,25 +58,27 @@ class UserApi
         ])] string $phone,
         #[RPC\Assertions([new Assert\NotBlank])]
         string $appName,
+        ?string $asRole = null
     ): bool
     {
 
         $this->loginLimiter->checkIp();
 
         try {
-            $otp = $this->userSdkService->getOTP($phone, $appName);
+            $role = $this->userSdkService->getRole($phone, $asRole);
+            $otp = $this->userSdkService->getOTP($phone, $appName, $role->slug);
         } catch (\Exception) {
             throw new GetOTPException();
         }
 
-        $this->sendOtp($otp, $phone);
+        $this->sendOtp($otp, $phone, $role->name);
 
         return true;
     }
 
-    protected function sendOtp(string $otp, string $phone): void
+    protected function sendOtp(string $otp, string $phone, string $role): void
     {
-        $message = $this->twig->render($this->otpTemplate, ['otp' => $otp]);
+        $message = $this->twig->render($this->otpTemplate, ['otp' => $otp, 'role' => $role]);
 
         $this->messengerSdkService->send(
             message: $message,
@@ -107,10 +109,11 @@ class UserApi
         #[RPC\Assertions([new Assert\NotBlank])]
         string $otp,
         #[RPC\Assertions([new Assert\NotBlank])]
-        string $appName
+        string $appName,
+        ?string $asRole = null
     ): object
     {
-        return $this->userSdkService->login($phone, $otp, $appName);
+        return $this->userSdkService->login($phone, $otp, $appName, $asRole);
     }
 
     /**

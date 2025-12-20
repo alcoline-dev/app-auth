@@ -17,6 +17,11 @@ readonly class UserFetcher
     public function getUserFromAccessToken(string $accessToken): UserMeInfoView
     {
         $user = $this->userProcedure->me($accessToken);
-        return UserMeInfoView::fromArray(DTOTransformer::toArray($user));
+        $authRole = $this->userProcedure->getAuthorizedRole($accessToken);
+
+        $user = UserMeInfoView::fromArray(DTOTransformer::toArray($user));
+        $user->authorizedRole = $authRole;
+
+        return $user;
     }
 }
