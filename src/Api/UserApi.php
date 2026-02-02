@@ -65,7 +65,6 @@ class UserApi
             $role = $this->userSdkService->getRole($phone, $asRole);
             $otp = $this->userSdkService->getOTP($phone, $appName, $role->slug);
         } catch (\Exception) {
-            $this->loginLimiter->checkIp();
             throw new GetOTPException();
         }
 
@@ -129,8 +128,10 @@ class UserApi
         try {
             $user = $this->userContext->getUser() ?? $this->userSdkService->me($accessToken ?? '');
         } catch (\Throwable $e) {
+            $this->loginLimiter->checkIp();
             throw new RpcInvalidTokenException($e->getMessage(), previous: $e);
         }
+        $this->loginLimiter->clearCurrentIp();
         return UserMeInfoView::fromArray(DTOTransformer::toArray($user));
     }
 
