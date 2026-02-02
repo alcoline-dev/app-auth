@@ -61,13 +61,11 @@ class UserApi
         ?string $asRole = null
     ): bool
     {
-
-        $this->loginLimiter->checkIp();
-
         try {
             $role = $this->userSdkService->getRole($phone, $asRole);
             $otp = $this->userSdkService->getOTP($phone, $appName, $role->slug);
         } catch (\Exception) {
+            $this->loginLimiter->checkIp();
             throw new GetOTPException();
         }
 

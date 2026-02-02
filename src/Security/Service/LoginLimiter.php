@@ -28,7 +28,7 @@ final readonly class LoginLimiter
     {
         $clientIp = $this->requestStack->getCurrentRequest()?->getClientIp();
         if ($clientIp && !$this->canLogin($clientIp)) {
-            throw new LoginRateLimitException();
+            throw LoginRateLimitException::fromIp($clientIp);
         }
     }
 }
