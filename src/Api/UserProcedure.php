@@ -20,7 +20,7 @@ use Ufo\DTO\DTOTransformer;
 use Ufo\RpcError\RpcInvalidTokenException;
 use Ufo\RpcObject\RPC;
 
-class UserApi
+class UserProcedure
 {
     public const string OTP_SUBJECT = 'ОТР пароль';
     public const string TWIG_TEMPLATE = 'otp_message.html.twig';

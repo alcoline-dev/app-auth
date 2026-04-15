@@ -15,7 +15,7 @@ use GuzzleHttp\Pool;
 
 use function array_merge;
 
-class HubApi
+class HubProcedure
 {
     protected const int POOL_CONCURRENCY = 5;
     protected Client $client;
