@@ -1,7 +1,7 @@
 {
     "name": "alcoline-software/app-auth",
     "type": "library",
-    "version": "2.1.2",
+    "version": "3.0.0",
     "minimum-stabilyty": "stable",
     "license": "MIT",
     "authors": [
@@ -26,7 +26,7 @@
         "symfony/validator": "^7.3",
         "symfony/routing": "^7.3",
         "symfony/cache": "^7.3",
-        "ufo-tech/json-rpc-bundle": "^9",
+        "ufo-tech/json-rpc-bundle": "^10",
         "guzzlehttp/guzzle": "^7.0",
         "twig/twig": "^3.21",
         "symfony/twig-bundle": "^7.3"
