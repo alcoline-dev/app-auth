@@ -8,6 +8,7 @@ class RoleDTO
 {
     public function __construct(
         public string $slug,
-        public string $name
+        public string $name,
+        public int $level = 0
     ) {}
 }
