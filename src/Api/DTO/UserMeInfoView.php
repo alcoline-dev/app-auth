@@ -25,7 +25,6 @@ class UserMeInfoView implements IArrayConvertible, IArrayConstructible
         public string $createdAt,
         public string $updatedAt,
         public string|null $email = null,
-        public string|null $externalId = null,
         public ?RoleDTO $authorizedRole = null
     ) {}
 }
