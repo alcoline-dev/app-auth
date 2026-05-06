@@ -1,7 +1,7 @@
 {
     "name": "alcoline-software/app-auth",
     "type": "library",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "minimum-stabilyty": "stable",
     "license": "MIT",
     "authors": [
