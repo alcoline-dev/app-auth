@@ -20,15 +20,13 @@ class UserMeInfoView implements IArrayConvertible, IArrayConstructible
         public string $fullName,
         public string $firstName,
         public string $lastName,
-        public string $roleName,
-        public string $roleSlug,
         public RoleDTO $mainRole,
         public array $roles,
         public string $createdAt,
         public string $updatedAt,
         public string|null $email = null,
-        public string|null $externalId = null,
-        public ?string $routeName = null,
-        public ?RoleDTO $authorizedRole = null
+        public ?RoleDTO $authorizedRole = null,
+        public bool $isExternal = false,
+        public ?string $photo = null,
     ) {}
 }

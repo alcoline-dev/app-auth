@@ -8,12 +8,12 @@ use Alcoline\Auth\Exceptions\LoginRateLimitException;
 use Closure;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\RateLimiter\RateLimiterFactory;
+use Symfony\Component\RateLimiter\RateLimiterFactoryInterface;
 
 final readonly class LoginLimiter
 {
     public function __construct(
-        private RateLimiterFactory $loginLimiter,
+        private RateLimiterFactoryInterface $loginLimiter,
         private RequestStack $requestStack
     ) {}
 
